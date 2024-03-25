@@ -346,10 +346,13 @@ class myrebnconv(nn.Module):
         return self.rl(self.bn(self.conv(x)))
 
 
-class BriaRMBG(nn.Module):
+
+
+
+class briarmbgf(nn.Module):
 
     def __init__(self,in_ch=3,out_ch=1):
-        super(BriaRMBG,self).__init__()
+        super(briarmbgf,self).__init__()
 
         self.conv_in = nn.Conv2d(in_ch,64,3,stride=2,padding=1)
         self.pool_in = nn.MaxPool2d(2,stride=2,ceil_mode=True)
